@@ -34,7 +34,84 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style>
+    
+     .left-section, .right-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+      font-weight: 700;
+      color: #2c3e50;
+      grid-column: span 2;
+    }
+
+    .quote {
+      font-size: 20px;
+      text-align: center;
+      font-style: italic;
+      color: #7f8c8d;
+      margin-bottom: 40px;
+      border-left: 5px solid #3498db;
+      padding-left: 20px;
+      grid-column: span 2;
+    }
+
+    .award-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      transform: translateY(20px);
+    }
+
+    .award-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .award-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    .award-description {
+      font-size: 16px;
+      color: #7f8c8d;
+    }
+
+    .award-image {
+      display: block;
+      margin: 20px auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      height: auto;
+    }
+
+    .award-details {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .award-details p {
+      font-size: 16px;
+      color: #95a5a6;
+    }
+
+    .award-details strong {
+      font-weight: 700;
+      color: #2c3e50;
+    }
+</style>
 </head>
 
 <body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
@@ -120,84 +197,46 @@
     <!-- End Banner -->
     
     <!-- section -->
-    <div class="section layout_padding about_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                           <h2>About</h2>    
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Read More ></a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/img3.png" alt="#" />
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+
+        <h1>Awards</h1>
+    
+        <p class="quote">Dedicated to excellence. Dedicated to your smile.</p>
+    
+        <div class="left-section">
+          <div class="award-section">
+            <div class="award-title">Innovation Award In Feb 2020</div>
+            <div class="award-description">Dr. Vikas Gautam from the Postgraduate Institute of Medical Education and Research (PGIMER) in Chandigarh received the Innovation Award for developing a herbal antiseptic. This recognition came as he won the first prize at the BRICS Technology Exposition 2020. His innovative work in</div>
+            <img src="https://i.imgur.com/O5Qm6C7.png" alt="Award Image" class="award-image">
+          </div>
         </div>
-    </div>
-    <!-- end section -->
+    
+        <div class="right-section">
+          <div class="award-section">
+            <div class="award-title">1st Prize In Innovation</div>
+            <div class="award-description">BRIC Technology Exposition 2020</div>
+            <div class="award-details">
+              <p><strong>INNOVATION AWARD</strong> in Feb 2020</p>
+              <p>Dr Vikas Gautam Of PGI Gets Innovation Award For Developing Herbal Antiseptic</p>
+            </div>
+            <img src="images/Patent.png" alt="Award Image" class="award-image">
+          </div>
+        </div>
+    
+      </div>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const container = document.querySelector('.container');
+          container.classList.add('visible');
+        });
+      </script>
 
     <!-- section -->
-    <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/img1.png" alt="#" />
-                    </div>
-                </div>
-                <div class="col-md-6 layout_padding">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-						   <h2><span class="theme_color">Welcome</span> To Exchange</h2>	
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">About more ></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<!-- end section -->
+   
    
     <!-- section -->
-    <div class="section white_fonts" style="background: #111;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" style="background: #fff;">
-                    <div class="full text_align_right_img">
-                        <img src="images/img2.png" alt="#" />
-                    </div>
-                </div>
-                <div class="col-md-6 layout_padding">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                           <h2><span class="theme_color">Apply for</span> Exchange</h2>    
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Exchange ></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- end section -->
     <!-- Start Footer -->
     <footer class="footer-box">

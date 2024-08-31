@@ -1,128 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In Vitro & In Vivo Experiments</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-            color: #333;
-        }
-        .subheader {
-            text-align: center;
-            font-size: 24px;
-            margin: 20px 0;
-            color: #333;
-        }
-        .category-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .cards-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 20px;
-            gap: 10px;
-        }
-        .card {
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            text-align: center;
-            transform: scale(0.9);
-            transition: transform 0.3s ease-in-out;
-        }
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .card h2 {
-            font-size: 18px;
-            margin: 10px 0;
-            color: #333;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .card {
-            animation: fadeIn 0.6s ease-in-out;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awards</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e2e2e2, #ffffff);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .left-section, .right-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+      font-weight: 700;
+      color: #2c3e50;
+      grid-column: span 2;
+    }
+
+    .quote {
+      font-size: 20px;
+      text-align: center;
+      font-style: italic;
+      color: #7f8c8d;
+      margin-bottom: 40px;
+      border-left: 5px solid #3498db;
+      padding-left: 20px;
+      grid-column: span 2;
+    }
+
+    .award-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      transform: translateY(20px);
+    }
+
+    .award-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .award-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    .award-description {
+      font-size: 16px;
+      color: #7f8c8d;
+    }
+
+    .award-image {
+      display: block;
+      margin: 20px auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      height: auto;
+    }
+
+    .award-details {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .award-details p {
+      font-size: 16px;
+      color: #95a5a6;
+    }
+
+    .award-details strong {
+      font-weight: 700;
+      color: #2c3e50;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>In vitro & In vivo</h1>
+  <div class="container">
+
+    <h1>Awards</h1>
+
+    <p class="quote">Dedicated to excellence. Dedicated to your smile.</p>
+
+    <div class="left-section">
+      <div class="award-section">
+        <div class="award-title">Innovation Award In Feb 2020</div>
+        <div class="award-description">Dr. Vikas Gautam from the Postgraduate Institute of Medical Education and Research (PGIMER) in Chandigarh received the Innovation Award for developing a herbal antiseptic. This recognition came as he won the first prize at the BRICS Technology Exposition 2020. His innovative work in</div>
+        <img src="https://i.imgur.com/O5Qm6C7.png" alt="Award Image" class="award-image">
+      </div>
     </div>
 
-    <div class="category-container">
-        <div class="subheader">
-            <h2>In vitro (Laboratory Experiments)</h2>
+    <div class="right-section">
+      <div class="award-section">
+        <div class="award-title">1st Prize In Innovation</div>
+        <div class="award-description">BRIC Technology Exposition 2020</div>
+        <div class="award-details">
+          <p><strong>INNOVATION AWARD</strong> in Feb 2020</p>
+          <p>Dr Vikas Gautam Of PGI Gets Innovation Award For Developing Herbal Antiseptic</p>
         </div>
-        <div class="cards-container">
-            <div class="card">
-                <img src="invitro1.png" alt="In vitro Experiment 1">
-                <h2>Cytotoxicity Test</h2>
-            </div>
-            <div class="card">
-                <img src="invitro2.png" alt="In vitro Experiment 2">
-                <h2>Toxicity Test</h2>
-            </div>
-            <div class="card">
-                <img src="invitro3.png" alt="In vitro Experiment 3">
-                <h2>Mode of Action</h2>
-            </div>
-        </div>
+        <img src="https://i.imgur.com/z5Q4W3R.png" alt="Award Image" class="award-image">
+      </div>
     </div>
 
-    <div class="category-container">
-        <div class="subheader">
-            <h2>In Vivo (Animal Experiments)</h2>
-        </div>
-        <div class="cards-container">
-            <div class="card">
-                <img src="invivo1.png" alt="In Vivo Experiment 1">
-                <h2>Experiment 1</h2>
-            </div>
-            <div class="card">
-                <img src="invivo2.png" alt="In Vivo Experiment 2">
-                <h2>Experiment 2</h2>
-            </div>
-            <div class="card">
-                <img src="invivo3.png" alt="In Vivo Experiment 3">
-                <h2>Experiment 3</h2>
-            </div>
-        </div>
-    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      container.classList.add('visible');
+    });
+  </script>
 
 </body>
 </html>
