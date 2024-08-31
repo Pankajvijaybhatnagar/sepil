@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Page</title>
+    <title>In Vitro & In Vivo Experiments</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,98 +12,117 @@
             padding: 0;
         }
         .header {
-            background-color: #ffffff;
-            padding: 10px;
             text-align: center;
-        }
-        .header img {
-            max-width: 150px;
-        }
-        .content {
             padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+        }
+        .subheader {
             text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            color: #333;
         }
-        .content img {
-            max-width: 100%;
-            height: auto;
-        }
-        .footer {
-            background-color: #f89c1c;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .footer .logo {
+        .category-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
-        .footer .logo img {
-            max-width: 100px;
-            margin-right: 20px;
-        }
-        .footer .contact, .footer .links, .footer .patent {
-            margin: 10px 0;
-        }
-        .footer .links {
+        .cards-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 10px;
         }
-        .footer .links div {
-            text-align: left;
+        .card {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out;
         }
-        .footer .links a {
-            color: white;
-            text-decoration: none;
+        .card img {
+            width: 100%;
+            border-radius: 10px;
         }
-        .footer .patent img {
-            max-width: 150px;
+        .card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card {
+            animation: fadeIn 0.6s ease-in-out;
         }
     </style>
 </head>
 <body>
+
     <div class="header">
-        <img src="path_to_logo.png" alt="Logo">
+        <h1>In vitro & In vivo</h1>
     </div>
-    <div class="content">
-        <h1>News</h1>
-        <img src="path_to_image1.png" alt="News">
-        <p>Move the cursor to where you want to enter text.</p>
-    </div>
-    <div class="footer">
-        <div class="logo">
-            <img src="path_to_logo.png" alt="Sepil Logo">
-            <div>
-                <p>Shop No. 79, Third Floor, Gami Industrial Park</p>
-                <p>C-39A, S Central Road, TTC Industrial Area</p>
-                <p>Pawne, Navi Mumbai Maharashtra - 400705.</p>
-                <p>Email: buenosinternational@gmail.com</p>
-                <p>Phone: +91-98776-68549</p>
+
+    <div class="category-container">
+        <div class="subheader">
+            <h2>In vitro (Laboratory Experiments)</h2>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img src="invitro1.png" alt="In vitro Experiment 1">
+                <h2>Cytotoxicity Test</h2>
+            </div>
+            <div class="card">
+                <img src="invitro2.png" alt="In vitro Experiment 2">
+                <h2>Toxicity Test</h2>
+            </div>
+            <div class="card">
+                <img src="invitro3.png" alt="In vitro Experiment 3">
+                <h2>Mode of Action</h2>
             </div>
         </div>
-        <div class="links">
-            <div>
-                <h3>Important Links</h3>
-                <p><a href="#">Sepil</a></p>
-                <p><a href="#">Sepil-Plus</a></p>
-                <p><a href="#">SepVet</a></p>
-                <p><a href="#">Results</a></p>
-                <p><a href="#">News</a></p>
-            </div>
-            <div>
-                <h3>Important Links</h3>
-                <p><a href="#">Awards</a></p>
-                <p><a href="#">Publications</a></p>
-                <p><a href="#">Careers</a></p>
-                <p><a href="#">News & Article</a></p>
-                <p><a href="#">Legal Notice</a></p>
-            </div>
+    </div>
+
+    <div class="category-container">
+        <div class="subheader">
+            <h2>In Vivo (Animal Experiments)</h2>
         </div>
-        <div class="patent">
-            <h3>Patent Granted</h3>
-            <img src="path_to_patent_image.png" alt="Patent Certificate">
+        <div class="cards-container">
+            <div class="card">
+                <img src="invivo1.png" alt="In Vivo Experiment 1">
+                <h2>Experiment 1</h2>
+            </div>
+            <div class="card">
+                <img src="invivo2.png" alt="In Vivo Experiment 2">
+                <h2>Experiment 2</h2>
+            </div>
+            <div class="card">
+                <img src="invivo3.png" alt="In Vivo Experiment 3">
+                <h2>Experiment 3</h2>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
