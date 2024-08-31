@@ -34,7 +34,14 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style>
+        .zoomed {
+            transform: scale(2);
+            z-index: 10;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+    </style>
 </head>
 
 <body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
@@ -51,11 +58,10 @@
     <!-- Start header -->
     <header class="top-header">
         <div class="header_top">
-            
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                        <a class="navbar-brand" href="index.html"><img src="" alt=""></a>
                     </div>
                     <div class="site_information">
                         <ul>
@@ -66,42 +72,42 @@
                     </div>
                 </div>
             </div>
-        
         </div>
         <div class="header_bottom">
-          <div class="container">
-            <div class="col-sm-12">
-                <div class="menu_orange_section" style="background: #ff880e;">
-                   <nav class="navbar header-nav navbar-expand-lg"> 
-                     <div class="menu_section">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                    <ul class="navbar-nav">
-                        <li><a class="nav-link" href="index.html">Home</a></li>
-                        <li><a class="nav-link" href="about.html">About</a></li>
-                        <li><a class="nav-link" href="exchange.html">Exchange</a></li>
-                        <li><a class="nav-link" href="services.html">Services</a></li>
-                        <li><a class="nav-link" href="new.html">News</a></li>
-                        <li><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                     </div>
-                 </nav>
-                 <div class="search-box">
-                    <input type="text" class="search-txt" placeholder="Search">
-                    <a class="search-btn">
-                        <img src="images/search_icon.png" alt="#" />
-                    </a>
-                </div> 
+            <div class="container">
+                <div class="col-sm-12">
+                    <div class="menu_orange_section" style="background: #ff880e;">
+                        <nav class="navbar header-nav navbar-expand-lg">
+                            <div class="menu_section">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                                    <ul class="navbar-nav">
+                                        <li><a class="nav-link" href="index.html">Home</a></li>
+                                        <li><a class="nav-link" href="about.html">About</a></li>
+                                        <li><a class="nav-link" href="exchange.html">Exchange</a></li>
+                                        <li><a class="nav-link" href="services.html">Services</a></li>
+                                        <li><a class="nav-link" href="new.html">News</a></li>
+                                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="search-box">
+                            <input type="text" class="search-txt" placeholder="Search">
+                            <a class="search-btn">
+                                <img src="images/search_icon.png" alt="#" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-        
     </header>
     <!-- End header -->
 
@@ -118,120 +124,78 @@
         </div>
     </div>
     <!-- End Banner -->
-    
-   <!-- section -->
+
+    <!-- section -->
     <div class="section layout_padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="full">
                         <div class="heading_main text_align_center">
-                           <h2><span class="theme_color"></span>News</h2>    
+                            <h2><span class="theme_color"></span>News</h2>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
+                <!-- First News Image -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="full news_blog">
-                       <img class="img-responsive" src="images/b1.png" alt="#" />
-                       <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Bitcoin News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b2.png" alt="#" />
+                        <img class="img-responsive zoomable" src="images/Press-Game-Changer_page-0001.jpg" alt="#" />
                         <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Ethereum News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
+                        <div class="blog_details">
+                            <h3>Bitcoin News</h3>
+                            <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum</p>
+                        </div>
                     </div>
                 </div>
+                <!-- Second News Image -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="full news_blog">
-                        <img class="img-responsive" src="images/b3.png" alt="#" />
+                        <img class="img-responsive zoomable" src="images/News_Herbal-formulation-by-PGIMER-doctor-promises-quick-healing-Times-of-India-TOI_13-Feb-2021_page-0001_(1).jpg" alt="#" />
                         <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Light News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
+                        <div class="blog_details">
+                            <h3>Ethereum News</h3>
+                            <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum</p>
+                        </div>
                     </div>
                 </div>
+                <!-- Third News Image -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="full news_blog">
-                       <img class="img-responsive" src="images/b1.png" alt="#" />
-                       <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Bitcoin News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b2.png" alt="#" />
+                        <img class="img-responsive zoomable" src="images/Max_Gurgaon_Amar_Bharti.jpg" alt="#" />
                         <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Ethereum News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
+                        <div class="blog_details">
+                            <h3>Light News</h3>
+                            <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum</p>
+                        </div>
                     </div>
                 </div>
+                <!-- Fourth News Image -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="full news_blog">
-                        <img class="img-responsive" src="images/b3.png" alt="#" />
+                        <img class="img-responsive zoomable" src="images/CCF24022021_page-0001.jpg" alt="#" />
                         <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Light News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
+                        <div class="blog_details">
+                            <h3>Light News</h3>
+                            <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                       <img class="img-responsive" src="images/b1.png" alt="#" />
-                       <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Bitcoin News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b2.png" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Ethereum News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b3.png" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Light News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
-                    </div>
-                </div>
-             </div>
+            </div>
         </div>
     </div>
     <!-- end section -->
-   
+
     <!-- Start Footer -->
     <footer class="footer-box">
         <div class="container">
             <div class="row">
-               <div class="col-md-12 white_fonts">
+                <div class="col-md-12 white_fonts">
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
@@ -244,75 +208,95 @@
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
-                                    <li><a href="home.html">> Home</a></li>
+                                    <li><a href="index.html">> Home</a></li>
                                     <li><a href="about.html">> About</a></li>
                                     <li><a href="exchange.html">> Exchange</a></li>
                                     <li><a href="services.html">> Services</a></li>
-                                    <li><a href="new.html">> New</a></li>
+                                    <li><a href="new.html">> News</a></li>
                                     <li><a href="contact.html">> Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <div class="footer_blog full white_fonts">
-                             <h3>Newsletter</h3>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                             <div class="newsletter_form">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="full">
                                 <form action="index.html">
-                                   <input type="email" placeholder="Your Email" name="#" required="">
-                                   <button>Submit</button>
+                                    <fieldset>
+                                        <div class="field">
+                                            <input type="email" name="email" placeholder="Enter your email" />
+                                            <input type="submit" value="Subscribe" />
+                                        </div>
+                                    </fieldset>
                                 </form>
-                             </div>
-                         </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <div class="footer_blog full white_fonts">
-                             <h3>Contact us</h3>
-                             <ul class="full">
-                               <li><img src="images/i5.png"><span>London 145<br>United Kingdom</span></li>
-                               <li><img src="images/i6.png"><span>demo@gmail.com</span></li>
-                               <li><img src="images/i7.png"><span>+12586954775</span></li>
-                             </ul>
-                         </div>
+                                <h3>Contact us</h3>
+                            </div>
+                            <div class="full">
+                                <ul class="social_icon">
+                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="full">
+                                <ul class="menu_footer">
+                                    <li><a href="#">Contact@demo.com</a></li>
+                                    <li><a href="#">+01 1234567890</a></li>
+                                </ul>
                             </div>
                         </div>
-					</div>
+                    </div>
                 </div>
-			 </div>
+                <div class="col-12 white_fonts">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="full">
+                                <div class="border_top1"></div>
+                                <p>© 2021 All Rights Reserved. Design by <a href="https://html.design/">Free HTML
+                                        Templates</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- End Footer -->
 
-    <div class="footer_bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="crp">© Copyrights 2019 design by html.design</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
-
-    <!-- ALL JS FILES -->
     <script src="js/jquery.min.js"></script>
-	<script src="js/popper.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
+    <!-- All Plugins -->
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery.pogo-slider.min.js"></script>
     <script src="js/slider-index.js"></script>
     <script src="js/smoothscroll.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/images-loded.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Custom scripts -->
     <script src="js/custom.js"></script>
-	
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.zoomable');
+
+            images.forEach(image => {
+                image.addEventListener('click', function () {
+                    if (this.classList.contains('zoomed')) {
+                        this.classList.remove('zoomed');
+                    } else {
+                        images.forEach(img => img.classList.remove('zoomed'));
+                        this.classList.add('zoomed');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
