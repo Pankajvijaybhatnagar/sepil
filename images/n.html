@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Page</title>
+    <title>Medical Cases</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,98 +12,124 @@
             padding: 0;
         }
         .header {
-            background-color: #ffffff;
-            padding: 10px;
             text-align: center;
-        }
-        .header img {
-            max-width: 150px;
-        }
-        .content {
             padding: 20px;
-            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .content img {
-            max-width: 100%;
-            height: auto;
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
         }
-        .footer {
-            background-color: #f89c1c;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        .category {
+            margin: 40px 20px;
         }
-        .footer .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .category h2 {
+            font-size: 28px;
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        .footer .logo img {
-            max-width: 100px;
-            margin-right: 20px;
-        }
-        .footer .contact, .footer .links, .footer .patent {
-            margin: 10px 0;
-        }
-        .footer .links {
+        .cases-container {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .footer .links div {
-            text-align: left;
+        .case-card {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
         }
-        .footer .links a {
-            color: white;
-            text-decoration: none;
+        .case-card img {
+            width: 100%;
+            border-radius: 10px;
         }
-        .footer .patent img {
-            max-width: 150px;
+        .case-card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .case-card:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
+
     <div class="header">
-        <img src="path_to_logo.png" alt="Logo">
+        <h1>Medical Cases</h1>
     </div>
-    <div class="content">
-        <h1>News</h1>
-        <img src="path_to_image1.png" alt="News">
-        <p>Move the cursor to where you want to enter text.</p>
-    </div>
-    <div class="footer">
-        <div class="logo">
-            <img src="path_to_logo.png" alt="Sepil Logo">
-            <div>
-                <p>Shop No. 79, Third Floor, Gami Industrial Park</p>
-                <p>C-39A, S Central Road, TTC Industrial Area</p>
-                <p>Pawne, Navi Mumbai Maharashtra - 400705.</p>
-                <p>Email: buenosinternational@gmail.com</p>
-                <p>Phone: +91-98776-68549</p>
+
+    <!-- Pressure Sores (Bedsores) Category -->
+    <div class="category">
+        <h2>Pressure Sores (Bedsores)</h2>
+        <div class="cases-container">
+            <div class="case-card">
+                <img src="pressure_sores_case.jpg" alt="Pressure Sores Case">
+                <h2>Pressure Sores (Bedsores)</h2>
+            </div>
+            <div class="case-card">
+                <img src="pressure_sores_case.jpg" alt="Pressure Sores Case">
+                <h2>Pressure Sores (Bedsores)</h2>
+            </div>
+            <div class="case-card">
+                <img src="pressure_sores_case.jpg" alt="Pressure Sores Case">
+                <h2>Pressure Sores (Bedsores)</h2>
             </div>
         </div>
-        <div class="links">
-            <div>
-                <h3>Important Links</h3>
-                <p><a href="#">Sepil</a></p>
-                <p><a href="#">Sepil-Plus</a></p>
-                <p><a href="#">SepVet</a></p>
-                <p><a href="#">Results</a></p>
-                <p><a href="#">News</a></p>
+    </div>
+
+    <!-- Burns Category -->
+    <div class="category">
+        <h2>Burns</h2>
+        <div class="cases-container">
+            <div class="case-card">
+                <img src="burns_case.jpg" alt="Burns Case">
+                <h2>Burns</h2>
             </div>
-            <div>
-                <h3>Important Links</h3>
-                <p><a href="#">Awards</a></p>
-                <p><a href="#">Publications</a></p>
-                <p><a href="#">Careers</a></p>
-                <p><a href="#">News & Article</a></p>
-                <p><a href="#">Legal Notice</a></p>
+            <div class="case-card">
+                <img src="burns_case.jpg" alt="Burns Case">
+                <h2>Burns</h2>
             </div>
-        </div>
-        <div class="patent">
-            <h3>Patent Granted</h3>
-            <img src="path_to_patent_image.png" alt="Patent Certificate">
+            <div class="case-card">
+                <img src="burns_case.jpg" alt="Burns Case">
+                <h2>Burns</h2>
+            </div>
+            <div class="case-card">
+                <img src="burns_case.jpg" alt="Burns Case">
+                <h2>Burns</h2>
+            </div>
         </div>
     </div>
+
+    <!-- Diabetic Foot Ulcers (DFUs) Category -->
+    <div class="category">
+        <h2>Diabetic Foot Ulcers (DFUs)</h2>
+        <div class="cases-container">
+            <!-- Case 1 -->
+            <div class="case-card">
+                <img src="case1.jpg" alt="Diabetic Foot Ulcer Case 1">
+                <h2>Case 1: Patient A</h2>
+            </div>
+            <!-- Case 2 -->
+            <div class="case-card">
+                <img src="case2.jpg" alt="Diabetic Foot Ulcer Case 2">
+                <h2>Case 2: Patient B</h2>
+            </div>
+            <!-- Case 3 -->
+            <div class="case-card">
+                <img src="case3.jpg" alt="Diabetic Foot Ulcer Case 3">
+                <h2>Case 3: Patient C</h2>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
