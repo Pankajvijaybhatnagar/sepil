@@ -34,7 +34,109 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
 
+/* Basic dropdown styling */
+.nav-item {
+position: relative;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+background-color: #eee9e9;
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-item {
+padding: 12px 16px;
+color: #333;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-item:hover {
+background-color: #030202;
+text-emphasis-color: black;
+}
+
+.nav-item:hover .dropdown-menu {
+display: block;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+        }
+        .subheader {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .category-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 10px;
+        }
+        .card {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+    </style>
 </head>
 
 <body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
@@ -55,7 +157,7 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                        <a class="navbar-brand" href="index.html"><img src="" alt=""></a>
                     </div>
                     <div class="site_information">
                         <ul>
@@ -83,8 +185,17 @@
                     <ul class="navbar-nav">
                         <li><a class="nav-link" href="index.html">Home</a></li>
                         <li><a class="nav-link" href="about.html">About</a></li>
-                        <li><a class="nav-link" href="exchange.html">Exchange</a></li>
-                        <li><a class="nav-link" href="services.html">Services</a></li>
+                        <li><a class="nav-link" href="exchange.html">Cases</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Results
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="services.html">In Vitro & In Vivo</a>
+                                <!-- <a class="dropdown-item" href="service2.html">Service 2</a> -->
+                                <!-- <a class="dropdown-item" href="service3.html">Service 3</a> -->
+                            </div>
+                        </li>
                         <li><a class="nav-link" href="new.html">News</a></li>
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
@@ -111,7 +222,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="banner_title">
-                        <h3>Services</h3>
+                        <h3>In vitro & In vivo</h3>
                     </div>
                 </div>
             </div>
@@ -120,75 +231,46 @@
     <!-- End Banner -->
     
     <!-- section -->
-    <div class="section layout_padding">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="heading_main text_align_center">
-                           <h2><span class="theme_color"></span>Services</h2>    
-                        </div>
-                    </div>
-                </div>
+    <div class="header">
+        <h1>In vitro & In vivo</h1>
+    </div>
+
+    <div class="category-container">
+        <div class="subheader">
+            <h2>In vitro (Laboratory Experiments)</h2>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img src="invitro1.png" alt="In vitro Experiment 1">
+                <h2>Cytotoxicity Test</h2>
             </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                       <img class="img-responsive" src="images/s1.png" alt="#" />
-                       <h4>Safe & Secure</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s2.png" alt="#" />
-                        <h4>Mobile Apps</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s3.png" alt="#" />
-                        <h4>Wallet</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s4.png" alt="#" />
-                        <h4>Experts Support</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s2.png" alt="#" />
-                        <h4>Mobile Apps</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s3.png" alt="#" />
-                        <h4>Wallet</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                       <img class="img-responsive" src="images/s1.png" alt="#" />
-                       <h4>Safe & Secure</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s2.png" alt="#" />
-                        <h4>Mobile Apps</h4>
-                    </div>
-                </div>
+            <div class="card">
+                <img src="invitro2.png" alt="In vitro Experiment 2">
+                <h2>Toxicity Test</h2>
             </div>
-            <div class="row margin-top_30">
-                <div class="col-sm-12">
-                    <div class="full">
-                        <div class="center">
-                            <a class="main_bt" href="#">See More ></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="card">
+                <img src="invitro3.png" alt="In vitro Experiment 3">
+                <h2>Mode of Action</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-container">
+        <div class="subheader">
+            <h2>In Vivo (Animal Experiments)</h2>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img src="invivo1.png" alt="In Vivo Experiment 1">
+                <h2>Experiment 1</h2>
+            </div>
+            <div class="card">
+                <img src="invivo2.png" alt="In Vivo Experiment 2">
+                <h2>Experiment 2</h2>
+            </div>
+            <div class="card">
+                <img src="invivo3.png" alt="In Vivo Experiment 3">
+                <h2>Experiment 3</h2>
             </div>
         </div>
     </div>
@@ -213,8 +295,17 @@
                                 <ul class="menu_footer">
                                     <li><a href="home.html">> Home</a></li>
                                     <li><a href="about.html">> About</a></li>
-                                    <li><a href="exchange.html">> Exchange</a></li>
-                                    <li><a href="services.html">> Services</a></li>
+                                    <li><a href="exchange.html">> Cases</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Results
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                            <a class="dropdown-item" href="services.html">In Vitro & In Vivo</a>
+                                            <!-- <a class="dropdown-item" href="service2.html">Service 2</a> -->
+                                            <!-- <a class="dropdown-item" href="service3.html">Service 3</a> -->
+                                        </div>
+                                    </li>
                                     <li><a href="new.html">> New</a></li>
                                     <li><a href="contact.html">> Contact</a></li>
                                 </ul>

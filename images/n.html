@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Cases</title>
+    <title>In Vitro & In Vivo Experiments</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,111 +22,104 @@
             font-size: 36px;
             color: #333;
         }
-        .category {
-            margin: 40px 20px;
-        }
-        .category h2 {
-            font-size: 28px;
+        .subheader {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
             color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
         }
-        .cases-container {
+        .category-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
         }
-        .case-card {
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 10px;
+        }
+        .card {
             background-color: #fff;
-            margin: 10px;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            max-width: 300px;
+            width: 300px;
             text-align: center;
+            transform: scale(0.9);
             transition: transform 0.3s ease-in-out;
         }
-        .case-card img {
+        .card img {
             width: 100%;
             border-radius: 10px;
         }
-        .case-card h2 {
+        .card h2 {
             font-size: 18px;
             margin: 10px 0;
             color: #333;
         }
-        .case-card:hover {
+        .card:hover {
             transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card {
+            animation: fadeIn 0.6s ease-in-out;
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>Medical Cases</h1>
+        <h1>In vitro & In vivo</h1>
     </div>
 
-    <!-- Pressure Sores (Bedsores) Category -->
-    <div class="category">
-        <h2>Pressure Sores (Bedsores)</h2>
-        <div class="cases-container">
-            <div class="case-card">
-                <img src="pressure_sores_case.jpg" alt="Pressure Sores Case">
-                <h2>Pressure Sores (Bedsores)</h2>
+    <div class="category-container">
+        <div class="subheader">
+            <h2>In vitro (Laboratory Experiments)</h2>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img src="invitro1.png" alt="In vitro Experiment 1">
+                <h2>Cytotoxicity Test</h2>
             </div>
-            <div class="case-card">
-                <img src="pressure_sores_case.jpg" alt="Pressure Sores Case">
-                <h2>Pressure Sores (Bedsores)</h2>
+            <div class="card">
+                <img src="invitro2.png" alt="In vitro Experiment 2">
+                <h2>Toxicity Test</h2>
             </div>
-            <div class="case-card">
-                <img src="pressure_sores_case.jpg" alt="Pressure Sores Case">
-                <h2>Pressure Sores (Bedsores)</h2>
+            <div class="card">
+                <img src="invitro3.png" alt="In vitro Experiment 3">
+                <h2>Mode of Action</h2>
             </div>
         </div>
     </div>
 
-    <!-- Burns Category -->
-    <div class="category">
-        <h2>Burns</h2>
-        <div class="cases-container">
-            <div class="case-card">
-                <img src="burns_case.jpg" alt="Burns Case">
-                <h2>Burns</h2>
-            </div>
-            <div class="case-card">
-                <img src="burns_case.jpg" alt="Burns Case">
-                <h2>Burns</h2>
-            </div>
-            <div class="case-card">
-                <img src="burns_case.jpg" alt="Burns Case">
-                <h2>Burns</h2>
-            </div>
-            <div class="case-card">
-                <img src="burns_case.jpg" alt="Burns Case">
-                <h2>Burns</h2>
-            </div>
+    <div class="category-container">
+        <div class="subheader">
+            <h2>In Vivo (Animal Experiments)</h2>
         </div>
-    </div>
-
-    <!-- Diabetic Foot Ulcers (DFUs) Category -->
-    <div class="category">
-        <h2>Diabetic Foot Ulcers (DFUs)</h2>
-        <div class="cases-container">
-            <!-- Case 1 -->
-            <div class="case-card">
-                <img src="case1.jpg" alt="Diabetic Foot Ulcer Case 1">
-                <h2>Case 1: Patient A</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="invivo1.png" alt="In Vivo Experiment 1">
+                <h2>Experiment 1</h2>
             </div>
-            <!-- Case 2 -->
-            <div class="case-card">
-                <img src="case2.jpg" alt="Diabetic Foot Ulcer Case 2">
-                <h2>Case 2: Patient B</h2>
+            <div class="card">
+                <img src="invivo2.png" alt="In Vivo Experiment 2">
+                <h2>Experiment 2</h2>
             </div>
-            <!-- Case 3 -->
-            <div class="case-card">
-                <img src="case3.jpg" alt="Diabetic Foot Ulcer Case 3">
-                <h2>Case 3: Patient C</h2>
+            <div class="card">
+                <img src="invivo3.png" alt="In Vivo Experiment 3">
+                <h2>Experiment 3</h2>
             </div>
         </div>
     </div>
