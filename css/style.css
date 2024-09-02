@@ -2406,3 +2406,70 @@ ul.bottom_menu li {
 	}
 }
 /* ------------------Awards end ------------------ */
+
+/* cases-------------------------------------- */
+
+.card {
+	overflow: hidden;
+	transition: transform 0.3s;
+	position: relative;
+	border: none;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #c1c1c15f;
+}
+.container h1{
+	text-align: center;
+	font-weight: 700;
+	font-size: 3rem;
+	margin-bottom: 3rem;
+
+}
+.card h2 {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: opacity 1s ease-in-out;
+}
+.card:hover h1 {
+	opacity: 0;
+}
+.card:hover {
+	transform: scale(1.05);
+	background: linear-gradient(to right, #fbbb7b, #f78706c4);
+}
+
+.card-body {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	text-align: center;
+}
+
+.card:hover .card-body {
+	opacity: 1;
+}
+
+.card-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	transform: translateY(100%);
+	transition: transform 1s ease-in-out;
+}
+
+.card:hover .card-title {
+	transform: translateY(0);
+}
+/* ---------------------cases end-------------------------- */
