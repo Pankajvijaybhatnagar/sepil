@@ -100,6 +100,7 @@ body {
             flex-wrap: wrap;
             padding: 20px;
             gap: 10px;
+            
         }
         .card {
             background-color: #fff;
@@ -112,7 +113,7 @@ body {
             transition: transform 0.3s ease-in-out;
         }
         .card img {
-            width: 100%;
+            width: 100vw;
             border-radius: 10px;
         }
         .card h2 {
@@ -234,45 +235,164 @@ body {
     <div class="header">
         <h1>In vitro & In vivo</h1>
     </div>
+    <style>
+        .cards-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            width: 200px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay-pop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+            animation: zoomIn 0.5s ease forwards;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .overlay-pop img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .overlay-pop .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 
     <div class="category-container">
         <div class="subheader">
             <h2>In vitro (Laboratory Experiments)</h2>
         </div>
         <div class="cards-container">
-            <div class="card">
-                <img src="invitro1.png" alt="In vitro Experiment 1">
-                <h2>Cytotoxicity Test</h2>
+            <div class="card" >
+                <img onclick="showImage(this.src)" src="images/Screenshot-2024-06-03-131601.png" alt="In vitro Experiment 1">
             </div>
-            <div class="card">
-                <img src="invitro2.png" alt="In vitro Experiment 2">
-                <h2>Toxicity Test</h2>
+            <div class="card" >
+                <img onclick="showImage(this.src)" src="images/Screenshot-2024-06-03-131648.png" alt="In vitro Experiment 1">
+               
             </div>
-            <div class="card">
-                <img src="invitro3.png" alt="In vitro Experiment 3">
-                <h2>Mode of Action</h2>
+            <div class="card" >
+                <img onclick="showImage(this.src)" src="images/Screenshot-2024-06-03-131633.png" alt="In vitro Experiment 1">
+               
             </div>
+            <div class="card" >
+                <img onclick="showImage(this.src)" src="images/Screenshot-2024-06-03-132611.png" alt="In vitro Experiment 1">
+               
+            </div>
+            <div class="card" >
+                <img onclick="showImage(this.src)" src="images/Screenshot-2024-06-03-132911.png" alt="In vitro Experiment 1">
+                
+            </div>
+
+            
         </div>
+        
+        <div class="overlay-pop" id="imageOverlay">
+            <span class="close-btn" onclick="closeImage()">×</span>
+            <img id="overlayImage" src="" alt="Zoomed Image">
+        </div>
+        
+        <script>
+            function showImage(imageSrc) {
+                console.log(imageSrc);
+                
+                const overlay = document.getElementById('imageOverlay');
+                const image = document.getElementById('overlayImage');
+                image.src = imageSrc;
+                overlay.style.display = 'flex';
+            }
+        
+            function closeImage() {
+                const overlay = document.getElementById('imageOverlay');
+                overlay.style.display = 'none';
+            }
+        </script>
     </div>
 
     <div class="category-container">
         <div class="subheader">
             <h2>In Vivo (Animal Experiments)</h2>
         </div>
-        <div class="cards-container">
-            <div class="card">
-                <img src="invivo1.png" alt="In Vivo Experiment 1">
-                <h2>Experiment 1</h2>
+        <div class="category-container">
+            <div class="subheader">
+                
             </div>
-            <div class="card">
-                <img src="invivo2.png" alt="In Vivo Experiment 2">
-                <h2>Experiment 2</h2>
+            <div class="cards-container">
+                <div class="card" >
+                    <img onclick="showImage(this.src)" src="images/Sepil-Buenos_Dec-2023c_page-0025.jpg" alt="In vitro Experiment 1">
+                </div>
+                <div class="card" >
+                    <img onclick="showImage(this.src)" src="images/Sepil-Buenos_Dec-2023c_page-0026.jpg" alt="In vitro Experiment 1">
+                   
+                </div>
+                <div class="card" >
+                    <img onclick="showImage(this.src)" src="images/Sepil-Buenos_Dec-2023c_page-0027.jpg" alt="In vitro Experiment 1">
+                   
+                </div>
+                
+    
+                
             </div>
-            <div class="card">
-                <img src="invivo3.png" alt="In Vivo Experiment 3">
-                <h2>Experiment 3</h2>
+            
+            <div class="overlay-pop" id="imageOverlay">
+                <span class="close-btn" onclick="closeImage()">×</span>
+                <img id="overlayImage" src="" alt="Zoomed Image">
             </div>
-        </div>
+            
+            <script>
+                function showImage(imageSrc) {
+                    console.log(imageSrc);
+                    
+                    const overlay = document.getElementById('imageOverlay');
+                    const image = document.getElementById('overlayImage');
+                    image.src = imageSrc;
+                    overlay.style.display = 'flex';
+                }
+            
+                function closeImage() {
+                    const overlay = document.getElementById('imageOverlay');
+                    overlay.style.display = 'none';
+                }
+            </script>
     </div>
     <!-- end section -->
    

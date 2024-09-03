@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -91,10 +91,8 @@
                     </div>
                     <div class="site_information">
                         <ul>
-                            <li><a href="mailto:exchang@gmail.com"><img src="images/mail_icon.png"
-                                        alt="#" />exchang@gmail.com</a></li>
-                            <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png"
-                                        alt="#" />+7123569847</a></li>
+                            <li><a href="mailto:exchang@gmail.com"><img src="images/mail_icon.png" alt="#" />bigbyteinfo@gmail.com</a></li>
+                            <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png" alt="#" />+7123569847</a></li>
                             <li><a class="join_bt" href="#">Join us</a></li>
                         </ul>
                     </div>
@@ -392,6 +390,67 @@
         </div>
     </div>
     <!-- end section -->
+	<!-- section -->
+     <style>
+          h1 {
+            color: #555;
+            text-align: center;
+        }
+        h2 {
+           text-align: center;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .swiper-slide {
+            background-color: #fff;
+            border: 2px solid #ffa500;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        .swiper-slide h3 {
+            background-color: #ffa500;
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .swiper-slide iframe {
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* Navigation buttons */
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffa500;
+        }
+    
+     </style>
+    <h1>VIDEO'S</h1>
+    <h2>Reviews & Study</h2>
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <h3>London, UK: Sepil receiving critical Acclaim by Global Experts.</h3>
+                <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h3>Sepil changed the life of an Iraqi patient by healing 35 yrs old wound (1988)</h3>
+                <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h3>Dr. Satish Chugh from Kalanaur, Rohtak Reviews Sepil | Expert Insights</h3>
+                <iframe src="https://www.youtube.com/embed/example3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <!-- section -->
     <div class="section layout_padding about_bg">
         <div class="container">
@@ -420,138 +479,34 @@
                 </div>
             </div>
         </div>
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
+
+    <!-- Link to Swiper's JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+    </script>
+    <!-- end section -->
+	<!-- section -->
+   
     <!-- end section -->
     <!-- section -->
-    <div class="section layout_padding padding_top_0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="heading_main text_align_center">
-                            <h2><span class="theme_color"></span>News</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b1.png" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                        <div class="blog_details">
-                            <h3>Bitcoin News</h3>
-                            <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b2.png" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                        <div class="blog_details">
-                            <h3>Ethereum News</h3>
-                            <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b3.png" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                        <div class="blog_details">
-                            <h3>Light News</h3>
-                            <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end section -->
-    <!-- section -->
-    <div class="section layout_padding padding_top_0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="heading_main text_align_center">
-                            <h2><span class="theme_color"></span>Contact</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!-- end section -->
     <!-- contact_form -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-
-            <div class="section-title">
-                <h1>News Highlights</h1>
-                <p>We are excited to introduce Sepil, our latest breakthrough in wound care, designed to address some of
-                    the most challenging conditions faced by patients in India. As a leading pharmaceutical
-                    manufacturer, we have developed Sepil to offer a highly effective solution for diabetic wound
-                    infections, non-healing ulcers, burns, and a wide range of infective, traumatic, acute, or chronic
-                    wounds. </p>
-            </div>
-
-
-
-            <div class="row portfolio-container">
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="images/news1.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Health</h4>
-                            <p>Health Services</p>
-                            <div class="portfolio-links">
-                                <a href="./images/news1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                                    title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="./images/news1.jpg" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <div class="portfolio-wrap">
-                        <img src="images/news4.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Gaushala</h4>
-                            <p>gaushala</p>
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/gausala-3.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="images/news3.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Nature</h4>
-                            <p>nature</p>
-                            <div class="portfolio-links">
-                                <a href="assets/img/portfolio/pla.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn">More News</div>
-            </div>
-        </div>
-    </section>
+    
     <!-- end contact_form -->
     <!-- end section -->
     <!-- Start Footer -->
